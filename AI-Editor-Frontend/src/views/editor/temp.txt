@@ -1,0 +1,20 @@
+<div style="border: 1px solid #ccc">
+        <!-- 工具栏 -->
+        <Toolbar
+        :editor="editorRef"
+        :defaultConfig="toolbarConfig"
+        style="border-bottom: 1px solid #ccc"
+        />
+        <!-- 编辑器 -->
+        <Editor
+            v-model="valueHtml"
+            :defaultConfig="editorConfig"
+            @onChange="handleChange"
+            @onCreated="handleCreated"
+            @onDestroyed="handleDestroyed"
+            @onFocus="handleFocus"
+            @onBlur="handleBlur"
+            @customAlert="customAlert"
+            style="height: 500px"
+        />
+    </div>
